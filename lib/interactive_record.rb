@@ -20,7 +20,5 @@ class InteractiveRecord
   end
 
 
-  
+
 end
-
-
