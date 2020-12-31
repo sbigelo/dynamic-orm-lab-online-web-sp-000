@@ -29,8 +29,8 @@ class InteractiveRecord
     self.class.table_name
   end
 
-  self.column_names.each do |col_name|
-    attr_accessor col_name.to_sym
+  def col_names_for_insert
+     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end
 
 
