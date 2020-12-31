@@ -29,7 +29,7 @@ class InteractiveRecord
     self.class.table_name
   end
 
-  self.col_names_for_insert.each do |col_name|
+  def self.col_names_for_insert.each do |col_name|
     attr_accessor col_name.to_sym
   end
 
